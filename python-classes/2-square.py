@@ -17,8 +17,8 @@ class Square:
 
     def __validate_size(self):
         """Validate the size attribute.
-        
-        Raises: 
+
+        Raises:
             TypeError: if the size is not integer.
             TypeValue: if the size is less than 0.
         """
@@ -26,4 +26,3 @@ class Square:
             raise TypeError("size must be an integer")
         elif self.__size < 0:
             raise ValueError("size must be >= 0")
-	
