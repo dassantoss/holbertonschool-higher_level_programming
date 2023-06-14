@@ -1,6 +1,7 @@
 #Example files
 *main.py
 fibo.py
+example_google.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
