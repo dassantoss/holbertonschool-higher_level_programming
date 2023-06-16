@@ -20,16 +20,16 @@ Usage
     >>> print(matrix_divided(matrix, 3))
     [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
-Note that quotients are rounded  to a maximum of two decimal places.
+Note that quotients are rounded to a maximum of two decimal places.
 
 ::
 
-	>>> matrix = [
-	... 	[1, 2, 3],
-	... 	[4, 5, 6]
-	... ]
-	>>>print(matrix_divided(matrix, 3))
-	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
 The original matrix is left unchanged.
 
@@ -59,19 +59,6 @@ Integers and floats can be combined.
     ... ]
     >>> print(matrix_divided(matrix, 3))
     [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
-
-Invalid Matrices
-================
-
-The parameter ``matrix`` must be a list of lists consisting of either ints or
-floats. If ``matrix`` is not a list, a TypeError is raised.
-
-::
-
-	>>> matrix = "no list"
-	>>> print(matrix_divided(matrix))
-	Traceback (most recent call last):
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Invalid Matrices
 ==============
@@ -132,6 +119,7 @@ neither ints nor floats.
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 
 Finally, all the rows in ``matrix`` must be the same size. If any rows are
 of different sizes, a new TypeError is raised.
