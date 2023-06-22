@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Function that returns list"""
+"""Function that returns list
+"""
 
 
 def lookup(obj):
