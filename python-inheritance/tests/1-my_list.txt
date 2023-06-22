@@ -23,8 +23,10 @@ Usage:
 
 Examples:
 =========
-	MyList = __import__('1-my_list').MyList
-    # Create a new MyList instance
-	my_list = MyList([1, 4, 2, 3])
-	# Print sorted list
-	my_list.print_sorted()
+
+Importing the class from the module:
+>>> MyList = __import__('1-my_list').MyList
+
+Print numbers list
+>>> my_list = MyList([1, 4, 2, 3])
+>>> my_list.print_sorted()
