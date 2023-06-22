@@ -2,6 +2,6 @@
 '''Define class BaseGeometry'''
 
 
-class BaseGeometry():
+class BaseGeometry:
     '''Represent class BaseGeometry'''
     pass
