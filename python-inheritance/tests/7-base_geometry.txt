@@ -1,6 +1,9 @@
-==============================
-How to use ``7-base_geometry``
-==============================
+# 7-base_geometry.txt
+# Santiago Echeverri L. <6356@holbertonschool.com>
+
+=============================
+How to Use 7-base_geometry.py
+=============================
 
 This modules defines a base geometry class BaseGeometry.
 
