@@ -1,0 +1,30 @@
+================
+Module: 1-my_list.py
+================
+
+This module define the class MyList, which is a subclass of the list class
+
+Classes:
+========
+
+	-MyList: represents a list object with extra features.
+
+Functions:
+==========
+
+	-print_sorted: Function Prints the list, but sorted (ascending sort)
+
+Usage:
+======
+
+    To use this module, import it and create instances of the MyList class. 
+    You can then use the inherited list methods as well as the additional 
+    method provided by MyList.
+
+Examples:
+=========
+	MyList = __import__('1-my_list').MyList
+    # Create a new MyList instance
+	my_list = MyList([1, 4, 2, 3])
+	# Print sorted list
+	my_list.print_sorted()
