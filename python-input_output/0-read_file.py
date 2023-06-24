@@ -9,8 +9,5 @@ def read_file(filename=""):
     Returns:
         none
     """
-    script_path = __file__
-    script_dir = script_path[:script_path.rfind('/') + 1]
-    file_path = script_dir + filename
-    with open(file_path, "r", encoding="utf-8") as file:
+    with open(filename, "r", encoding="utf-8") as file:
         print(file.read(), end="")
