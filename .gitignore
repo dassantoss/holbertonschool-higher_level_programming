@@ -2,6 +2,7 @@
 *main*.py
 fibo.py
 example_google.py
+my_file*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
