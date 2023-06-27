@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Define class base'''
 
+
 class Base:
     '''Represent a class base'''
     __nb_objects = 0
