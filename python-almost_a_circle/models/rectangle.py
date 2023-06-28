@@ -9,7 +9,7 @@ class Rectangle(Base):
     '''Represents a rectangle, inherits from Base'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Inicialize Rectangle
+        '''Initialize Rectangle
 
         Args:
             width (int): Width of the rectangle
@@ -32,6 +32,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         '''Setter for width'''
+        self.validator("width", value)
         self.__width = value
 
     @property
@@ -42,6 +43,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         '''Setter for height'''
+        self.validator("height", value)
         self.__height = value
 
     @property
@@ -52,6 +54,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         '''Setter for x'''
+        self.validator("x", value)
         self.__x = value
 
     @property
@@ -62,4 +65,23 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         '''Setter for y'''
+        self.validator("y", value)
         self.__y = value
+
+    @staticmethod
+    def validator(name, value):
+        '''Validate if a value is an integer and positive
+        Args:
+            name (str): Name of the attribute
+            value (int): Value of the attribute
+        Raises:
+            TypeError: If value is not an integer
+            ValueError: If value is not positive
+        '''
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if name == "x" or name == "y":
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(name))
+        elif value <= 0:
+            raise ValueError("{} must be > 0".format(name))
