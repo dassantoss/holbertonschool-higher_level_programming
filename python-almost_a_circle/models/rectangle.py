@@ -75,6 +75,11 @@ class Rectangle(Base):
         '''
         return self.__width * self.__height
 
+    def display(self):
+        '''Prints in stdout the Rectangle'''
+        for _ in range(self.height):
+            print("#" * self.width)
+
     @staticmethod
     def validator(name, value):
         '''Validate if a value is an integer and positive
