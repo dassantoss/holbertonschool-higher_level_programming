@@ -68,6 +68,13 @@ class Rectangle(Base):
         self.validator("y", value)
         self.__y = value
 
+    def area(self):
+        '''Calcule the area value of the Rectangle
+        Returns:
+            the area value of the Rectangle
+        '''
+        return self.__width * self.__height
+
     @staticmethod
     def validator(name, value):
         '''Validate if a value is an integer and positive
