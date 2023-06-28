@@ -102,6 +102,19 @@ class Rectangle(Base):
         except IndexError:
             pass
 
+    def to_dictionary(self):
+        '''Dictionary representation of Rectangle
+        Returns:
+             The dictionary representation of a Rectangle
+        '''
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+        }
+
     @staticmethod
     def validator(name, value):
         '''Validate if a value is an integer and positive
