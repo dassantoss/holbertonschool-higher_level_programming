@@ -82,6 +82,20 @@ class Rectangle(Base):
         for _ in range(self.height):
             print(' ' * self.x + '#' * self.width)
 
+    def update(self, *args):
+        '''Update the class Rectangle
+        Args:
+            *args:
+        '''
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
+
     @staticmethod
     def validator(name, value):
         '''Validate if a value is an integer and positive
