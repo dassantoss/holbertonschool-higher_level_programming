@@ -104,7 +104,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        '''Static method to draw Rectangles and Squares using the Turtle graphics module
+        '''Static method to draw Rectangles and Squares using the Turtle
 
         Args:
             list_rectangles (list): A list of Rectangle instances
