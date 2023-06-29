@@ -33,6 +33,19 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Convert a JSON string representation to a list of dictionaries.
+        Args:
+            json_string (str): Representing a list of dictionaries in JSON.
+        Returns:
+            list: A list of dictionaries representing the data from the JSON.
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         '''Class method to save a list of instances to a JSON file
@@ -53,15 +66,18 @@ class Base:
         with open(filename, "w") as f:
             f.write(json_string)
 
-    @staticmethod
-    def from_json_string(json_string):
-        """
-        Convert a JSON string representation to a list of dictionaries.
+    @classmethod
+    def create(cls, **dictionary):
+        '''Class method to create an instance with attributes already set
         Args:
-            json_string (str): Representing a list of dictionaries in JSON.
+            **dictionary: Double pointer to a dictionary
         Returns:
-            list: A list of dictionaries representing the data from the JSON.
-        """
-        if json_string is None or len(json_string) == 0:
-            return []
-        return json.loads(json_string)
+            Base: An instance with all attributes set
+        '''
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+
+        dummy.update(**dictionary)
+        return dummy
