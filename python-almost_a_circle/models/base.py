@@ -58,9 +58,9 @@ class Base:
         """
         Convert a JSON string representation to a list of dictionaries.
         Args:
-            json_string (str): A string representing a list of dictionaries in JSON format.
+            json_string (str): Representing a list of dictionaries in JSON.
         Returns:
-            list: A list of dictionaries representing the data from the JSON string.
+            list: A list of dictionaries representing the data from the JSON.
         """
         if json_string is None or len(json_string) == 0:
             return []
