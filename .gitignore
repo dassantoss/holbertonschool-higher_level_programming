@@ -4,6 +4,8 @@ fibo.py
 example_google.py
 my_file*.txt
 *.json
+*Vagran*
+*vagran*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

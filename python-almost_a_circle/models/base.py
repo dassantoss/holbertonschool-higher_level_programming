@@ -2,6 +2,7 @@
 '''Define class base'''
 
 import json
+import turtle
 
 
 class Base:
@@ -100,3 +101,46 @@ class Base:
         instances = [cls.create(**d) for d in list_dicts]
 
         return instances
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        '''Static method to draw Rectangles and Squares using the Turtle graphics module
+
+        Args:
+            list_rectangles (list): A list of Rectangle instances
+            list_squares (list): A list of Square instances
+
+        Returns:
+            None
+        '''
+        # Create the Turtle screen
+        screen = turtle.Screen()
+
+        # Create a Turtle object
+        t = turtle.Turtle()
+
+        # Set the Turtle speed
+        t.speed(2)
+
+        # Draw Rectangles
+        for rect in list_rectangles:
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            for _ in range(2):
+                t.forward(rect.width)
+                t.right(90)
+                t.forward(rect.height)
+                t.right(90)
+
+        # Draw Squares
+        for square in list_squares:
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(square.size)
+                t.right(90)
+
+        # Exit on click
+        turtle.exitonclick()
