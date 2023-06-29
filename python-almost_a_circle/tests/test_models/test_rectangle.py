@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import unittest
-import sys
 from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
@@ -13,12 +12,8 @@ class TestRectangle(unittest.TestCase):
     """ Suite to test Rectangle class """
 
     def setUp(self):
-        '''Function to redirect stdout'''
-        sys.stdout = StringIO()
-
-    def tearDown(self):
-        '''Cleans everything'''
-        sys.stdout = sys.__stdout__
+        """ Method invoked for each test """
+        Base._Base__nb_objects = 0
 
     def test_new_rectangle(self):
         """ Test new rectangle """
