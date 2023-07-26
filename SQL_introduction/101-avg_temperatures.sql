@@ -1,4 +1,5 @@
--- Advanced task: Displayt the average temperature by city ordered by temperature (descending).
+-- Advanced task
+-- Display the average temperature by city ordered by temperature (descending).
 
 SELECT city, AVG(value) AS avg_temp
 FROM temperature
