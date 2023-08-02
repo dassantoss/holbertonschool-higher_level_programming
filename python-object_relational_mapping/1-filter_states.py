@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # Execute the SQL query to retrieve states with names starting with N
     cursor.execute("SELECT * \
                    FROM states \
-                   WHERE name LIKE 'N%' \
+                   WHERE name LIKE BINARY 'N%' \
                    ORDER BY id")
 
     # Fetch all the rows and display them
@@ -27,3 +27,5 @@ if __name__ == "__main__":
         print(state)
 
     # Close the cursor and connection to the database
+    cursor.close()
+    db.close()
