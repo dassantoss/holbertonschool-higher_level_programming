@@ -27,5 +27,3 @@ if __name__ == "__main__":
         print(state)
 
     # Close the cursor and connection to the database
-    cursor.close()
-    db.close()
