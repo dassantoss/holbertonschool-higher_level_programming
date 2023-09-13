@@ -5,15 +5,15 @@ fetch('https://hellosalut.stefanbohacek.dev/?lang=fr')
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    // Parse the text response
-    return response.text();
+    // Parse the JSON response
+    return response.json();
   })
-  .then(function(translation) {
+  .then(function(data) {
     // Select the HTML element with id "hello"
     var helloElement = document.getElementById('hello');
     
-    // Display the translation in the selected element
-    helloElement.textContent = translation;
+    // Display only the translation "Salut"
+    helloElement.textContent = data.hello;
   })
   .catch(function(error) {
     // Handle errors
